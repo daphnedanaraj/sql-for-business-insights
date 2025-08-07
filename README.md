@@ -1,4 +1,4 @@
-# Sales Commission Analysis using SQL
+# SQL for Business Insights
 
 ## Overview
 
@@ -10,7 +10,7 @@ This project demonstrates SQL skills by analyzing a sales commission dataset. Th
 - **`images/q1.png`**: Screenshot of the SQL query output displaying the total commission earned by each salesperson.
 - **`README.md`**: Documentation of the project, including SQL queries, insights, and recommendations.
 
-## SQL Query: Total Commission Earned by Each Salesperson
+## Question 1: What is the total commission earned by each salesperson?
 
 This query calculates the total commission earned by each salesperson:
 
@@ -24,6 +24,7 @@ FROM `regal-bonito-467416-p3.edtech.commissions` co
 JOIN `regal-bonito-467416-p3.edtech.salespersons` sp ON co.salesperson_id = sp.salesperson_id
 GROUP BY sp.salesperson_id, sp.first_name, sp.last_name
 ORDER BY total_commission DESC;
+```
 
 ## Query Output
 
@@ -44,3 +45,4 @@ Below is a screenshot showing the query output with the total commission earned 
 1. **Recognize Top Performers**: Reward Mindy Sutton and Steven Price for their exceptional performance.
 2. **Support for Lower Performers**: Colleen Bailey could benefit from additional training or mentorship to help improve sales and commission.
 3. **Incentive Programs**: Consider implementing an incentive program to encourage consistent performance across the team.
+
