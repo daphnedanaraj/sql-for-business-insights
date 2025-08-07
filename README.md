@@ -129,9 +129,7 @@ Below is a screenshot showing the query output with the total commission earned 
 ## Business Recommendations
 
 1. **Incentivize Top Performers**: Recognize **Mindy Sutton** and **Jessica Stewart** for their exceptional performance in the **EMEA** and **AMER** regions, and reward them with performance bonuses or leadership opportunities.
-
 2. **Support for Colleen Bailey**: Provide targeted mentorship or additional training for **Colleen Bailey**, who ranks at the bottom in all regions, to boost her performance and help close the performance gap.
-
 3. **Cross-Regional Knowledge Sharing**: Encourage **Steven Price** and the top performers in each region to share best practices and strategies, fostering collaboration and improving overall team performance across all regions.
 
 ---
@@ -195,10 +193,6 @@ Below is a screenshot showing the query output with the total revenue and total 
 
 This query calculates the total commission earned by salespeople for each course:
 
-## Question 5: Which courses generate the most total commission earned by salespeople?
-
-This query calculates the total commission earned by salespeople for each course:
-
 ```sql
 SELECT 
     c.course_name,
@@ -256,11 +250,10 @@ Below is a screenshot showing the query output with the courses ranked by revenu
 
 ## Business Recommendations
 
-- **Focus on High-Performing Courses**: Advanced Python Programming and Machine Learning for Beginners are top earners across all regions. Consider additional promotions or incentives to further boost their sales.
+1. **Focus on High-Performing Courses**: Advanced Python Programming and Machine Learning for Beginners are top earners across all regions. Consider additional promotions or incentives to further boost their sales.
+2. **Localized Marketing**: Tailor marketing strategies for each region, focusing on courses like Machine Learning for Beginners in APAC and Advanced Python Programming in EMEA.
+3. **Improve Course Performance**: Data Science Fundamentals may need more attention or adjustments in its curriculum or marketing strategy to boost its ranking and revenue across all regions.
 
-- **Localized Marketing**: Tailor marketing strategies for each region, focusing on courses like Machine Learning for Beginners in APAC and Advanced Python Programming in EMEA.
-
-- **Improve Course Performance**: Data Science Fundamentals may need more attention or adjustments in its curriculum or marketing strategy to boost its ranking and revenue across all regions.
 
 
 
