@@ -225,6 +225,46 @@ Below is a screenshot showing the query output with the course generating the mo
 2. **Incentivize Sales for High-Commission Courses**: Offer additional incentives or bonuses for salespeople promoting top-earning courses like **Advanced Python Programming**.
 3. **Monitor Performance of High-Commission Courses**: Continuously track the performance of **Advanced Python Programming** to ensure it maintains its position as a top earner.
 
+---
+## Question 6: What is the ranking of courses by revenue within each region?
+
+This query ranks courses within each region based on the revenue generated:
+
+```sql
+SELECT 
+    c.course_name,
+    s.region,
+    SUM(c.course_fee) AS total_revenue,
+    RANK() OVER (PARTITION BY s.region ORDER BY SUM(c.course_fee) DESC) AS revenue_rank
+FROM `regal-bonito-467416-p3.edtech.enrollments_with_salesperson` e
+JOIN `regal-bonito-467416-p3.edtech.courses` c ON e.course_id = c.course_id
+JOIN `regal-bonito-467416-p3.edtech.students` s ON e.student_id = s.student_id
+GROUP BY c.course_name, s.region
+ORDER BY s.region, revenue_rank;
+```
+
+## Query Output
+
+Below is a screenshot showing the query output with the courses ranked by revenue within each region:
+
+![Courses by Revenue](./images/q6.png)
+
+## Insights
+
+- Advanced Python Programming and Machine Learning for Beginners are the top 2 courses across all regions, consistently ranking #1 or #2 in AMER, APAC, and EMEA.
+- Data Science Fundamentals consistently ranks as the lowest-performing course across all regions, indicating it may need more attention or adjustments in its curriculum or marketing strategy.
+
+## Business Recommendations
+
+- **Focus on High-Performing Courses**: Advanced Python Programming and Machine Learning for Beginners are top earners across all regions. Consider additional promotions or incentives to further boost their sales.
+
+- **Localized Marketing**: Tailor marketing strategies for each region, focusing on courses like Machine Learning for Beginners in APAC and Advanced Python Programming in EMEA.
+
+- **Improve Course Performance**: Data Science Fundamentals may need more attention or adjustments in its curriculum or marketing strategy to boost its ranking and revenue across all regions.
+
+
+
+
 
 
 
