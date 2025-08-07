@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates SQL skills by analyzing a sales commission dataset. The dataset is generated using Python in a Jupyter notebook and uploaded to Google BigQuery for analysis. In this project, I focus on querying data related to sales performance and commission distribution across different salespeople. The key insights drawn from the analysis help in evaluating the performance of salespeople and making business recommendations.
+This project showcases SQL skills by analyzing a sales commission dataset. The dataset is generated using Python in a Jupyter notebook and then uploaded to Google BigQuery for analysis. The focus is on querying key metrics such as total commission earned by salespeople, regional revenue, and the performance of different courses. By comparing these metrics, the project aims to derive actionable insights and business recommendations that can enhance sales strategies, optimize commission structures, and improve overall performance across regions.
 
 ## Project Structure
 
@@ -261,6 +261,7 @@ Below is a screenshot showing the query output with the courses ranked by revenu
 - **Localized Marketing**: Tailor marketing strategies for each region, focusing on courses like Machine Learning for Beginners in APAC and Advanced Python Programming in EMEA.
 
 - **Improve Course Performance**: Data Science Fundamentals may need more attention or adjustments in its curriculum or marketing strategy to boost its ranking and revenue across all regions.
+
 
 
 
