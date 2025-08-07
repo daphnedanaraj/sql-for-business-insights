@@ -190,6 +190,41 @@ Below is a screenshot showing the query output with the total revenue and total 
 2. **Reevaluate Commission Structure**: Ensure the commission structure effectively incentivizes growth, especially in lower-revenue regions.
 3. **Support EMEA**: Invest in maintaining EMEA’s high performance through recognition, training, and market expansion.
 
+---
+## Question 5: Which courses generate the most total commission earned by salespeople?
+
+This query calculates the total commission earned by salespeople for each course:
+
+## Question 5: Which courses generate the most total commission earned by salespeople?
+
+This query calculates the total commission earned by salespeople for each course:
+
+```sql
+SELECT 
+    c.course_name,
+    SUM(co.commission_amount) AS total_commission
+FROM `regal-bonito-467416-p3.edtech.commissions` co
+JOIN `regal-bonito-467416-p3.edtech.courses` c ON co.course_id = c.course_id
+GROUP BY c.course_name
+ORDER BY total_commission DESC
+LIMIT 1;
+```
+## Query Output
+
+Below is a screenshot showing the query output with the course generating the most total commission:
+
+![Top Course by Total Commission](./images/q5.png)
+
+## Insights
+
+- The course with the highest total commission earned by salespeople is **Advanced Python Programming**, generating a total commission of **$92,175**.
+
+## Business Recommendations
+
+1. **Promote High-Commission Courses**: Increase marketing efforts for **Advanced Python Programming** to drive more sales and revenue.
+2. **Incentivize Sales for High-Commission Courses**: Offer additional incentives or bonuses for salespeople promoting top-earning courses like **Advanced Python Programming**.
+3. **Monitor Performance of High-Commission Courses**: Continuously track the performance of **Advanced Python Programming** to ensure it maintains its position as a top earner.
+
 
 
 
