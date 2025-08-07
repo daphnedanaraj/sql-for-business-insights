@@ -92,6 +92,49 @@ Below is a screenshot showing the query output with the total revenue generated 
 2. **Further Incentive for Tied Performers**: For the **APAC region**, where **Jessica Stewart** and **Steven Price** tied for the top spot, consider offering additional incentives to both to maintain this high performance.
 3. **Targeted Regional Training**: Based on the distribution, consider offering region-specific training programs to maximize performance in areas with more balanced or lower revenue distributions.
 
+---
+## Question 3: How does commission compare across salespeople, and where does each rank in total commission in their region?
+
+This query ranks salespeople by the total commission they earned within their respective regions:
+
+```sql
+SELECT 
+    sp.salesperson_id,
+    sp.first_name,
+    sp.last_name,
+    s.region,
+    SUM(co.commission_amount) AS total_commission,
+    RANK() OVER (PARTITION BY s.region ORDER BY SUM(co.commission_amount) DESC) AS commission_rank
+FROM `regal-bonito-467416-p3.edtech.commissions` co
+JOIN `regal-bonito-467416-p3.edtech.salespersons` sp ON co.salesperson_id = sp.salesperson_id
+JOIN `regal-bonito-467416-p3.edtech.enrollments_with_salesperson` e ON sp.salesperson_id = e.salesperson_id
+JOIN `regal-bonito-467416-p3.edtech.students` s ON e.student_id = s.student_id
+GROUP BY sp.salesperson_id, sp.first_name, sp.last_name, s.region
+ORDER BY s.region, commission_rank;
+```
+## Query Output
+
+Below is a screenshot showing the query output with the total commission earned by each salesperson in each region:
+
+![Total Commission by Region](./images/q3.png)
+
+## Insights
+
+### Rank Comparison:
+- **Mindy Sutton** consistently ranks among the top performers in all regions, with the highest total commission in **EMEA** and **APAC**, and the third-highest in **AMER**.
+- **Jessica Stewart** performs well in **AMER** and **APAC**, ranking first and third respectively, but lags behind in **EMEA**.
+- **Steven Price** shows strong performance across all regions, often ranking second or third.
+- **Colleen Bailey** consistently ranks at the bottom in all three regions, which suggests a need for performance improvement or additional support.
+
+## Business Recommendations
+
+1. **Incentivize Top Performers**: Recognize **Mindy Sutton** and **Jessica Stewart** for their exceptional performance in the **EMEA** and **AMER** regions, and reward them with performance bonuses or leadership opportunities.
+
+2. **Support for Colleen Bailey**: Provide targeted mentorship or additional training for **Colleen Bailey**, who ranks at the bottom in all regions, to boost her performance and help close the performance gap.
+
+3. **Cross-Regional Knowledge Sharing**: Encourage **Steven Price** and the top performers in each region to share best practices and strategies, fostering collaboration and improving overall team performance across all regions.
+
+
 
 
 
