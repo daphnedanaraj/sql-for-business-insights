@@ -46,6 +46,8 @@ Below is a screenshot showing the query output with the total commission earned 
 2. **Support for Lower Performers**: Colleen Bailey could benefit from additional training or mentorship to help improve sales and commission.
 3. **Incentive Programs**: Consider implementing an incentive program to encourage consistent performance across the team.
 
+---
+
 ## Question 2: Which salesperson ranks highest in total revenue generated in each region?
 
 This query ranks salespeople by their total revenue within each region:
@@ -88,5 +90,6 @@ Below is a screenshot showing the query output with the total revenue generated 
 1. **Reward Top Performers by Region**: Recognize **Jessica Stewart** (AMER and APAC) and **Mindy Sutton** (EMEA) for their outstanding revenue generation in their respective regions.
 2. **Further Incentive for Tied Performers**: For the **APAC region**, where **Jessica Stewart** and **Steven Price** tied for the top spot, consider offering additional incentives to both to maintain this high performance.
 3. **Targeted Regional Training**: Based on the distribution, consider offering region-specific training programs to maximize performance in areas with more balanced or lower revenue distributions.
+
 
 
